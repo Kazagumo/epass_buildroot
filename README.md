@@ -1,3 +1,41 @@
+# 明日方舟 电子通行证 Buildroot SDK
+
+基于aodzip/buildroot-tiny200.
+
+大概是一个混合版
+
+## Install
+
+### Install necessary packages
+``` shell
+sudo apt install wget unzip build-essential git bc swig libncurses-dev libpython3-dev libssl-dev
+sudo apt install python3-distutils
+```
+
+### Download BSP
+**Notice: Root permission is not necessery for download or extract.**
+```shell
+git clone https://github.com/inapp123/buildroot-epass
+```
+
+## Make the first build
+**Notice: Root permission is not necessery for build firmware.**
+
+### Apply defconfig
+**Caution: Apply defconfig will reset all buildroot configurations to default values.**
+
+**Generally, you only need to apply it once.**
+```shell
+cd buildroot-epass
+make rhodesisland_epass_defconfig
+```
+
+### Regular build
+```shell
+make
+```
+
+
 # Buildroot Package for Allwinner SIPs
 Opensource development package for Allwinner F1C100s & F1C200s
 
